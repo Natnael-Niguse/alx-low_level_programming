@@ -1,33 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
  * main - main block
  * Return: 0
  */
 int main(void)
 {
-	int c;
-	int d = 0;
+	int ones = '0';
+	int tens = '0';
 
-	while (d < 10)
+	for (tens = '0'; tens <= '9'; tens++)
 	{
-		c = 0;
-		while (c < 10)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			if (d != c && d < c)
+			if (!((ones == tens) || (tens > ones)))
 			{
-				putchar('0' + d);
-				putchar('0' + c);
-				if (c + d != 37)
+				putchar(tens);
+				putchar(ones);
+				if (!(ones == '0' && tens == '0'))
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			c++;
 		}
-		d++;
 	}
+
 	putchar('\n');
 	return (0);
 }
