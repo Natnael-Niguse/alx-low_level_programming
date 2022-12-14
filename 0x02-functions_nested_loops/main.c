@@ -1,4 +1,5 @@
-#ifndef holberton_h_include
+#ifndef HOLBERTON_H_INCLUED
+#define HOLBERTON_H_INCLUED
 
 int _putchar(char );
 void print_alphabet(void);
