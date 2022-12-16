@@ -7,4 +7,22 @@
 
 void print_diagonal(int n)
 {
-	int
+	int co, sp;
+
+	if (n <= 0)
+	{
+		_putchar('\n');
+	}
+	else
+	{
+		for (co = 1; co < n; co++)
+		{
+			for (sp = 1; sp < co; sp++)
+			{
+				_putchar(' ');
+			}
+			_putchar('\n');
+			_putchar('\n');
+		}
+	}
+}
