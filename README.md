@@ -1,1 +1,1 @@
-this is for c programming learn
+more pointer,arrays and strings
