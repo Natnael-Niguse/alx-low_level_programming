@@ -1,12 +1,12 @@
 #include "main.h"
-
 /**
- * string_toupper -  function that changes all lowercase
+ * string_toupper - function that changes all lowercase
  * letters of a string to uppercase
- * @ch: pointer
- * Return: char
+ * @ch: string para
+ * Return: string
  */
-char *string_toupper(char *)
+
+char *string_toupper(char *ch)
 {
 	int i = 0;
 
