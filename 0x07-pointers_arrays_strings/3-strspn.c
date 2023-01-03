@@ -2,9 +2,9 @@
 
 /**
  * _strspn - entry point
- * @s: input
- * @accept: input
- * Reutrn: 0
+ * @s: source string
+ * @accept: searching string
+ * Reutrn: new string
  */
 
 unsigned int _strspn(char *s, char *accept)
