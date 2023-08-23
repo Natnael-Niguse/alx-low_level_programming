@@ -13,23 +13,15 @@ NAME := school
 # Command for removing files
 RM := rm -f
 
-# Make rules
-.PHONY: all clean oclean fclean re
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all: $(OBJ) 
 	$(CC) $(OBJ) -o $(NAME)
 
-%.o: %.c
-	$(CC) -c $< -o $@
-
 clean:
-	$(RM) *~ $(NAME) $(OBJ)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
 
-fclean: clean
+fclean: clean oclean
 
 re: fclean all
