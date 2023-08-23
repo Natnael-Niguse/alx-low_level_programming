@@ -1,0 +1,35 @@
+# Compiler
+CC := gcc
+
+# Source files
+SRC := main.c school.c
+
+# Object files
+OBJ := $(SRC:.c=.o)
+
+# Executable name
+NAME := school
+
+# Command for removing files
+RM := rm -f
+
+# Make rules
+.PHONY: all clean oclean fclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	$(CC) -c $< -o $@
+
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
