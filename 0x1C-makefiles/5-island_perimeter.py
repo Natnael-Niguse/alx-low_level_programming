@@ -3,6 +3,7 @@
 5-island_perimeter.py
 """
 
+
 def island_perimeter(grid):
     """
     Calculates the perimeter of the island described in grid.
@@ -21,6 +22,7 @@ def island_perimeter(grid):
                     perimeter -= 2  # Subtract left side shared with left cell
 
     return perimeter
+
 
 # Test case
 if __name__ == "__main__":
