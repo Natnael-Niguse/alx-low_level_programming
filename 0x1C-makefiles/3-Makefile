@@ -25,11 +25,11 @@ $(NAME): $(OBJ)
 	$(CC) -c $< -o $@
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) *~ $(NAME) $(OBJ)
 
 oclean:
 	$(RM) $(OBJ)
 
-fclean: clean oclean
+fclean: clean
 
 re: fclean all
