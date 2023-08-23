@@ -2,7 +2,7 @@
 CC := gcc
 
 # Source files
-SRC := main.c school.c
+SRC := main.c school.c  # Add more .c files if needed
 
 # Object files
 OBJ := $(SRC:.c=.o)
@@ -24,12 +24,12 @@ $(NAME): $(OBJ)
 	$(CC) -c $< -o $@
 
 clean:
-	-$(RM) *~ $(NAME)
+	$(RM) *~ $(NAME) $(OBJ)
 
 oclean:
-	-$(RM) $(OBJ)
+	$(RM) $(OBJ)
 
-fclean: clean oclean
-	-$(RM) $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
 re: fclean all
