@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
+/**
 * linear_search - Write a function that searches for
 * @array: a value in
 * @size: an array of
 * @value: integers using
-* Return: the Linear search algorithm
+* Return: -1
 */
 
 int linear_search(int *array, size_t size, int value)
